@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_e3YOsMhoEeqYddPTqM0_3Q" name="papyrus-uml-openstack-nova">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_fCOz0MhoEeqYddPTqM0_3Q">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_vItIIMhoEeqYddPTqM0_3Q" name="wafec">
+    <packagedElement xmi:type="uml:Package" xmi:id="_xFIYkMhoEeqYddPTqM0_3Q" name="testing">
+      <packagedElement xmi:type="uml:Package" xmi:id="_y8BBsMhoEeqYddPTqM0_3Q" name="modeling">
+        <packagedElement xmi:type="uml:Package" xmi:id="_0w778MhoEeqYddPTqM0_3Q" name="openstack">
+          <packagedElement xmi:type="uml:Package" xmi:id="_4EleAMhoEeqYddPTqM0_3Q" name="nova">
+            <packagedElement xmi:type="uml:Package" xmi:id="_GZpfEMhpEeqYddPTqM0_3Q" name="features">
+              <packagedElement xmi:type="uml:Package" xmi:id="_JWJFYMhpEeqYddPTqM0_3Q" name="servers">
+                <packagedElement xmi:type="uml:Class" xmi:id="_X7jaIMhqEeqYddPTqM0_3Q" name="VmTest" classifierBehavior="_8bFmUMk7EeqQJ8QKyknAVQ">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_oWa-IMk7EeqQJ8QKyknAVQ" name="flavor" visibility="public">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_qR9dwMk7EeqQJ8QKyknAVQ" name="image" visibility="public">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_uPtFsMk7EeqQJ8QKyknAVQ" name="network" visibility="public">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_bHqRsNKaEeqdEMrUJGBsZw" name="flavor_alt" visibility="public">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                  </ownedAttribute>
+                  <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_8bFmUMk7EeqQJ8QKyknAVQ" name="VmTestStateMachine">
+                    <region xmi:type="uml:Region" xmi:id="_93Cm8Mk7EeqQJ8QKyknAVQ" name="Region1">
+                      <transition xmi:type="uml:Transition" xmi:id="_YdjLgMk8EeqQJ8QKyknAVQ" source="_HgB6cMk8EeqQJ8QKyknAVQ" target="_O0dxYMk8EeqQJ8QKyknAVQ"/>
+                      <transition xmi:type="uml:Transition" xmi:id="_BIv9YMk-EeqQJ8QKyknAVQ" name="t_create" source="_O0dxYMk8EeqQJ8QKyknAVQ" target="_ufXAYMk9EeqQJ8QKyknAVQ">
+                        <effect xmi:type="uml:OpaqueBehavior" xmi:id="_wgnzUNKaEeqdEMrUJGBsZw">
+                          <language>JAVA</language>
+                          <body>flavor = event.flavor;&#xD;
+image = event.image;&#xD;
+network = event.network;</body>
+                        </effect>
+                        <trigger xmi:type="uml:Trigger" xmi:id="_LEemsMk-EeqQJ8QKyknAVQ" event="_nPNpAMk8EeqQJ8QKyknAVQ"/>
+                      </transition>
+                      <transition xmi:type="uml:Transition" xmi:id="_MeMysMk-EeqQJ8QKyknAVQ" name="t_delete" source="_ufXAYMk9EeqQJ8QKyknAVQ" target="_O0dxYMk8EeqQJ8QKyknAVQ">
+                        <trigger xmi:type="uml:Trigger" xmi:id="_QyYksMk-EeqQJ8QKyknAVQ" event="_QrTsUMk-EeqQJ8QKyknAVQ"/>
+                      </transition>
+                      <subvertex xmi:type="uml:Pseudostate" xmi:id="_HgB6cMk8EeqQJ8QKyknAVQ" name=""/>
+                      <subvertex xmi:type="uml:State" xmi:id="_O0dxYMk8EeqQJ8QKyknAVQ" name="NoInstance"/>
+                      <subvertex xmi:type="uml:State" xmi:id="_ufXAYMk9EeqQJ8QKyknAVQ" name="Created">
+                        <region xmi:type="uml:Region" xmi:id="_wuqwksk9EeqQJ8QKyknAVQ" name="Region1">
+                          <transition xmi:type="uml:Transition" xmi:id="_pv5LIMk-EeqQJ8QKyknAVQ" name="t_suspend" source="_Rl4JEMk8EeqQJ8QKyknAVQ" target="_zHk-IMk8EeqQJ8QKyknAVQ">
+                            <trigger xmi:type="uml:Trigger" xmi:id="_x9KHgMk-EeqQJ8QKyknAVQ" event="_x1MeUMk-EeqQJ8QKyknAVQ"/>
+                          </transition>
+                          <transition xmi:type="uml:Transition" xmi:id="_rdbD8Mk-EeqQJ8QKyknAVQ" name="t_resume" source="_zHk-IMk8EeqQJ8QKyknAVQ" target="_Rl4JEMk8EeqQJ8QKyknAVQ">
+                            <trigger xmi:type="uml:Trigger" xmi:id="_3IMpAMk-EeqQJ8QKyknAVQ" event="_29E-IMk-EeqQJ8QKyknAVQ"/>
+                          </transition>
+                          <transition xmi:type="uml:Transition" xmi:id="_ECQrsMk_EeqQJ8QKyknAVQ" name="t_shelve" source="_Rl4JEMk8EeqQJ8QKyknAVQ" target="_ygvnoMk8EeqQJ8QKyknAVQ">
+                            <trigger xmi:type="uml:Trigger" xmi:id="_VsWu4Mk_EeqQJ8QKyknAVQ" event="_VgxxAMk_EeqQJ8QKyknAVQ"/>
+                          </transition>
+                          <transition xmi:type="uml:Transition" xmi:id="_FV6E4Mk_EeqQJ8QKyknAVQ" name="t_unshelve" source="_ygvnoMk8EeqQJ8QKyknAVQ" target="_Rl4JEMk8EeqQJ8QKyknAVQ">
+                            <trigger xmi:type="uml:Trigger" xmi:id="_clUx0Mk_EeqQJ8QKyknAVQ" event="_cfdaYMk_EeqQJ8QKyknAVQ"/>
+                          </transition>
+                          <transition xmi:type="uml:Transition" xmi:id="_LjlIEMk_EeqQJ8QKyknAVQ" name="t_pause" source="_Rl4JEMk8EeqQJ8QKyknAVQ" target="_JN5DEMk_EeqQJ8QKyknAVQ">
+                            <trigger xmi:type="uml:Trigger" xmi:id="_CR2okMlAEeqQJ8QKyknAVQ" event="_CLTUoMlAEeqQJ8QKyknAVQ"/>
+                          </transition>
+                          <transition xmi:type="uml:Transition" xmi:id="_M_oPUMk_EeqQJ8QKyknAVQ" name="t_unpause" source="_JN5DEMk_EeqQJ8QKyknAVQ" target="_Rl4JEMk8EeqQJ8QKyknAVQ">
+                            <trigger xmi:type="uml:Trigger" xmi:id="_GodccMlAEeqQJ8QKyknAVQ" event="_Gg400MlAEeqQJ8QKyknAVQ"/>
+                          </transition>
+                          <transition xmi:type="uml:Transition" xmi:id="_H_0bgMlBEeqQJ8QKyknAVQ" source="_8XnwsMk9EeqQJ8QKyknAVQ" target="_wKWbMMlAEeqQJ8QKyknAVQ"/>
+                          <transition xmi:type="uml:Transition" xmi:id="_QeG2cMlBEeqQJ8QKyknAVQ" name="t_migrate" source="_wKWbMMlAEeqQJ8QKyknAVQ" target="_wZ_WgMk8EeqQJ8QKyknAVQ">
+                            <trigger xmi:type="uml:Trigger" xmi:id="_XfencMlBEeqQJ8QKyknAVQ" event="_XZmo8MlBEeqQJ8QKyknAVQ"/>
+                          </transition>
+                          <transition xmi:type="uml:Transition" xmi:id="_RGz1MMlBEeqQJ8QKyknAVQ" name="t_resize_verify" source="_wZ_WgMk8EeqQJ8QKyknAVQ" target="_wKWbMMlAEeqQJ8QKyknAVQ">
+                            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_rW_nENKaEeqdEMrUJGBsZw">
+                              <language>JAVA</language>
+                              <body>if (event.confirm == 1) {&#xD;
+	flavor = flavor_alt;&#xD;
+} &#xD;
+flavor_alt = -1;</body>
+                            </effect>
+                            <trigger xmi:type="uml:Trigger" xmi:id="_oR-7UMlBEeqQJ8QKyknAVQ" event="_oJZnEMlBEeqQJ8QKyknAVQ"/>
+                          </transition>
+                          <transition xmi:type="uml:Transition" xmi:id="_0fR-oMlBEeqQJ8QKyknAVQ" name="t_resize" guard="_YWKiYMlCEeqQJ8QKyknAVQ" source="_wKWbMMlAEeqQJ8QKyknAVQ" target="_wZ_WgMk8EeqQJ8QKyknAVQ">
+                            <ownedRule xmi:type="uml:Constraint" xmi:id="_YWKiYMlCEeqQJ8QKyknAVQ">
+                              <specification xmi:type="uml:OpaqueExpression" xmi:id="_YWKiYclCEeqQJ8QKyknAVQ">
+                                <language>JAVA</language>
+                                <body>event.flavor != flavor</body>
+                              </specification>
+                            </ownedRule>
+                            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_X7X74NKaEeqdEMrUJGBsZw">
+                              <language>JAVA</language>
+                              <body>flavor_alt = event.flavor;</body>
+                            </effect>
+                            <trigger xmi:type="uml:Trigger" xmi:id="_4CiC8MlBEeqQJ8QKyknAVQ" event="_373aQMlBEeqQJ8QKyknAVQ"/>
+                          </transition>
+                          <transition xmi:type="uml:Transition" xmi:id="_JIG1wM0REeqbvrzg7cD3vQ" name="t_suspend_shelve" source="_zHk-IMk8EeqQJ8QKyknAVQ" target="_ygvnoMk8EeqQJ8QKyknAVQ">
+                            <trigger xmi:type="uml:Trigger" xmi:id="_ONmv8M0REeqbvrzg7cD3vQ" event="_VgxxAMk_EeqQJ8QKyknAVQ"/>
+                          </transition>
+                          <transition xmi:type="uml:Transition" xmi:id="_THt4ENJ4EeqdEMrUJGBsZw" name="t_rebuild" source="_wKWbMMlAEeqQJ8QKyknAVQ" target="_wKWbMMlAEeqQJ8QKyknAVQ">
+                            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_zirPENKaEeqdEMrUJGBsZw">
+                              <language>JAVA</language>
+                              <body>image = event.image;</body>
+                            </effect>
+                            <trigger xmi:type="uml:Trigger" xmi:id="_vPNuQNJ4EeqdEMrUJGBsZw" event="_uHUSENJ4EeqdEMrUJGBsZw"/>
+                          </transition>
+                          <subvertex xmi:type="uml:State" xmi:id="_zHk-IMk8EeqQJ8QKyknAVQ" name="Suspended"/>
+                          <subvertex xmi:type="uml:State" xmi:id="_ygvnoMk8EeqQJ8QKyknAVQ" name="Shelved"/>
+                          <subvertex xmi:type="uml:State" xmi:id="_wZ_WgMk8EeqQJ8QKyknAVQ" name="Resized"/>
+                          <subvertex xmi:type="uml:Pseudostate" xmi:id="_8XnwsMk9EeqQJ8QKyknAVQ" name=""/>
+                          <subvertex xmi:type="uml:State" xmi:id="_JN5DEMk_EeqQJ8QKyknAVQ" name="Paused"/>
+                          <subvertex xmi:type="uml:State" xmi:id="_wKWbMMlAEeqQJ8QKyknAVQ" name="Migratable">
+                            <region xmi:type="uml:Region" xmi:id="_8jwn4slAEeqQJ8QKyknAVQ" name="Region1">
+                              <transition xmi:type="uml:Transition" xmi:id="_Txq1wMk9EeqQJ8QKyknAVQ" name="t_start" source="_vlR8EMk8EeqQJ8QKyknAVQ" target="_Rl4JEMk8EeqQJ8QKyknAVQ">
+                                <trigger xmi:type="uml:Trigger" xmi:id="_ZDPdEMk9EeqQJ8QKyknAVQ" event="_Y7f2UMk9EeqQJ8QKyknAVQ"/>
+                              </transition>
+                              <transition xmi:type="uml:Transition" xmi:id="_BPSfsMk9EeqQJ8QKyknAVQ" name="t_stop" source="_Rl4JEMk8EeqQJ8QKyknAVQ" target="_vlR8EMk8EeqQJ8QKyknAVQ">
+                                <trigger xmi:type="uml:Trigger" xmi:id="_JHubkMk9EeqQJ8QKyknAVQ" event="_I-SLsMk9EeqQJ8QKyknAVQ"/>
+                              </transition>
+                              <transition xmi:type="uml:Transition" xmi:id="_J4ud4MlBEeqQJ8QKyknAVQ" source="_I356EMlBEeqQJ8QKyknAVQ" target="_Rl4JEMk8EeqQJ8QKyknAVQ"/>
+                              <subvertex xmi:type="uml:State" xmi:id="_Rl4JEMk8EeqQJ8QKyknAVQ" name="CreatedRunning"/>
+                              <subvertex xmi:type="uml:State" xmi:id="_vlR8EMk8EeqQJ8QKyknAVQ" name="Stopped"/>
+                              <subvertex xmi:type="uml:Pseudostate" xmi:id="_I356EMlBEeqQJ8QKyknAVQ" name="" kind="shallowHistory"/>
+                            </region>
+                          </subvertex>
+                        </region>
+                      </subvertex>
+                    </region>
+                  </ownedBehavior>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_Dp5oUMk6EeqQJ8QKyknAVQ" name="VmCreate">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_G08A8Mk6EeqQJ8QKyknAVQ" name="flavor" visibility="public">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_I0myoMk6EeqQJ8QKyknAVQ" name="image" visibility="public">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_KXVwsMk6EeqQJ8QKyknAVQ" name="network" visibility="public">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_OaeO8Mk6EeqQJ8QKyknAVQ" name="name" visibility="public">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                  </ownedAttribute>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_R3cFEMk6EeqQJ8QKyknAVQ" name="VmStop"/>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_Tx4_kMk6EeqQJ8QKyknAVQ" name="VmStart"/>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_WLWxUMk6EeqQJ8QKyknAVQ" name="VmShelve"/>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_XkyCYMk6EeqQJ8QKyknAVQ" name="VmUnshelve"/>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_aAhsEMk6EeqQJ8QKyknAVQ" name="VmSuspend"/>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_bV6KoMk6EeqQJ8QKyknAVQ" name="VmResume"/>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_coArsMk6EeqQJ8QKyknAVQ" name="VmResize">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_eFpHUMk6EeqQJ8QKyknAVQ" name="flavor" visibility="public">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                  </ownedAttribute>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_lAbvMMk6EeqQJ8QKyknAVQ" name="VmResizeVerify">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_pDkNcMk6EeqQJ8QKyknAVQ" name="confirm" visibility="public">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                  </ownedAttribute>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_vCmXsMk6EeqQJ8QKyknAVQ" name="VmMigrate"/>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_yZT00Mk6EeqQJ8QKyknAVQ" name="VmLiveMigrate"/>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_A2lWsMk7EeqQJ8QKyknAVQ" name="VmRebuild">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_BpjrwMk7EeqQJ8QKyknAVQ" name="image" visibility="public">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                  </ownedAttribute>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_2LZw8Mk7EeqQJ8QKyknAVQ" name="VmDelete"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_nPNpAMk8EeqQJ8QKyknAVQ" name="VmCreateSignal" signal="_Dp5oUMk6EeqQJ8QKyknAVQ"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_I-SLsMk9EeqQJ8QKyknAVQ" name="VmStopSignal" signal="_R3cFEMk6EeqQJ8QKyknAVQ"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_Y7f2UMk9EeqQJ8QKyknAVQ" name="VmStartSignal" signal="_Tx4_kMk6EeqQJ8QKyknAVQ"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_QrTsUMk-EeqQJ8QKyknAVQ" name="VmDeletedSignal" signal="_2LZw8Mk7EeqQJ8QKyknAVQ"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_x1MeUMk-EeqQJ8QKyknAVQ" name="VmSuspendSignal" signal="_aAhsEMk6EeqQJ8QKyknAVQ"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_29E-IMk-EeqQJ8QKyknAVQ" name="VmResumeSignal" signal="_bV6KoMk6EeqQJ8QKyknAVQ"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_VgxxAMk_EeqQJ8QKyknAVQ" name="VmShelveSignal" signal="_WLWxUMk6EeqQJ8QKyknAVQ"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_cfdaYMk_EeqQJ8QKyknAVQ" name="VmUnshelveSignal" signal="_XkyCYMk6EeqQJ8QKyknAVQ"/>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_8DUpwMk_EeqQJ8QKyknAVQ" name="VmPause"/>
+                <packagedElement xmi:type="uml:Signal" xmi:id="_9HxwYMk_EeqQJ8QKyknAVQ" name="VmUnpause"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_CLTUoMlAEeqQJ8QKyknAVQ" name="VmPauseSignal" signal="_8DUpwMk_EeqQJ8QKyknAVQ"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_Gg400MlAEeqQJ8QKyknAVQ" name="VmUnpauseSignal" signal="_9HxwYMk_EeqQJ8QKyknAVQ"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_XZmo8MlBEeqQJ8QKyknAVQ" name="VmMigrateSignal" signal="_vCmXsMk6EeqQJ8QKyknAVQ"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_oJZnEMlBEeqQJ8QKyknAVQ" name="VmResizeVerifySignal" signal="_lAbvMMk6EeqQJ8QKyknAVQ"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_373aQMlBEeqQJ8QKyknAVQ" name="VmResizeSignal" signal="_coArsMk6EeqQJ8QKyknAVQ"/>
+                <packagedElement xmi:type="uml:SignalEvent" xmi:id="_uHUSENJ4EeqdEMrUJGBsZw" name="VmRebuildSignal" signal="_A2lWsMk7EeqQJ8QKyknAVQ"/>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_33SW8MhqEeqYddPTqM0_3Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_33UMIMhqEeqYddPTqM0_3Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

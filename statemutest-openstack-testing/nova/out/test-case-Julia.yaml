@@ -1,0 +1,330 @@
+!testcase
+fictitiousName: Julia
+inputSet: 
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224088
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmMigrate
+- !input
+   args: 
+      flavor: '1'
+      image: '1'
+      name: '4'
+      network: '1'
+   expectedSet: 
+   - !expected
+      extras: 
+         destination: _ufXAYMk9EeqQJ8QKyknAVQ
+         source: _O0dxYMk8EeqQJ8QKyknAVQ
+         transition: _BIv9YMk-EeqQJ8QKyknAVQ
+      index: 1102224089
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   - !expected
+      extras: 
+         destination: _wKWbMMlAEeqQJ8QKyknAVQ
+         source: _8XnwsMk9EeqQJ8QKyknAVQ
+         transition: _H_0bgMlBEeqQJ8QKyknAVQ
+      index: 1102224090
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   - !expected
+      extras: 
+         destination: _Rl4JEMk8EeqQJ8QKyknAVQ
+         source: _I356EMlBEeqQJ8QKyknAVQ
+         transition: _J4ud4MlBEeqQJ8QKyknAVQ
+      index: 1102224091
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmCreate
+- !input
+   args: 
+      flavor: '1'
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224094
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmResize
+- !input
+   args: 
+      flavor: '1'
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224096
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmResize
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: 
+         destination: _zHk-IMk8EeqQJ8QKyknAVQ
+         source: _Rl4JEMk8EeqQJ8QKyknAVQ
+         transition: _pv5LIMk-EeqQJ8QKyknAVQ
+      index: 1102224097
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmSuspend
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: 
+         destination: _Rl4JEMk8EeqQJ8QKyknAVQ
+         source: _zHk-IMk8EeqQJ8QKyknAVQ
+         transition: _rdbD8Mk-EeqQJ8QKyknAVQ
+      index: 1102224099
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmResume
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: 
+         destination: _ygvnoMk8EeqQJ8QKyknAVQ
+         source: _Rl4JEMk8EeqQJ8QKyknAVQ
+         transition: _ECQrsMk_EeqQJ8QKyknAVQ
+      index: 1102224101
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmShelve
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: 
+         destination: _Rl4JEMk8EeqQJ8QKyknAVQ
+         source: _ygvnoMk8EeqQJ8QKyknAVQ
+         transition: _FV6E4Mk_EeqQJ8QKyknAVQ
+      index: 1102224103
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmUnshelve
+- !input
+   args: 
+      flavor: '1'
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224106
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmResize
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: 
+         destination: _vlR8EMk8EeqQJ8QKyknAVQ
+         source: _Rl4JEMk8EeqQJ8QKyknAVQ
+         transition: _BPSfsMk9EeqQJ8QKyknAVQ
+      index: 1102224107
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmStop
+- !input
+   args: 
+      image: '0'
+   expectedSet: 
+   - !expected
+      extras: 
+         destination: _wKWbMMlAEeqQJ8QKyknAVQ
+         source: _wKWbMMlAEeqQJ8QKyknAVQ
+         transition: _THt4ENJ4EeqdEMrUJGBsZw
+      index: 1102224109
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   - !expected
+      extras: 
+         destination: _vlR8EMk8EeqQJ8QKyknAVQ
+         source: _I356EMlBEeqQJ8QKyknAVQ
+         transition: __SHALLOW_T__I356EMlBEeqQJ8QKyknAVQ__vlR8EMk8EeqQJ8QKyknAVQ
+      index: 1102224110
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmRebuild
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224113
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmShelve
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: 
+         destination: _wZ_WgMk8EeqQJ8QKyknAVQ
+         source: _wKWbMMlAEeqQJ8QKyknAVQ
+         transition: _QeG2cMlBEeqQJ8QKyknAVQ
+      index: 1102224114
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmMigrate
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224117
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmUnshelve
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224119
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmUnpause
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: 
+         destination: _O0dxYMk8EeqQJ8QKyknAVQ
+         source: _ufXAYMk9EeqQJ8QKyknAVQ
+         transition: _MeMysMk-EeqQJ8QKyknAVQ
+      index: 1102224120
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmDelete
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224123
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmUnpause
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224125
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmResume
+- !input
+   args: 
+      flavor: '1'
+      image: '1'
+      name: '4'
+      network: '1'
+   expectedSet: 
+   - !expected
+      extras: 
+         destination: _ufXAYMk9EeqQJ8QKyknAVQ
+         source: _O0dxYMk8EeqQJ8QKyknAVQ
+         transition: _BIv9YMk-EeqQJ8QKyknAVQ
+      index: 1102224126
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   - !expected
+      extras: 
+         destination: _wKWbMMlAEeqQJ8QKyknAVQ
+         source: _8XnwsMk9EeqQJ8QKyknAVQ
+         transition: _H_0bgMlBEeqQJ8QKyknAVQ
+      index: 1102224127
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   - !expected
+      extras: 
+         destination: _vlR8EMk8EeqQJ8QKyknAVQ
+         source: _I356EMlBEeqQJ8QKyknAVQ
+         transition: __SHALLOW_T__I356EMlBEeqQJ8QKyknAVQ__vlR8EMk8EeqQJ8QKyknAVQ
+      index: 1102224128
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmCreate
+- !input
+   args: 
+      flavor: '1'
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224131
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmResize
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224133
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmSuspend
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224135
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmShelve
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: 
+         destination: _Rl4JEMk8EeqQJ8QKyknAVQ
+         source: _vlR8EMk8EeqQJ8QKyknAVQ
+         transition: _Txq1wMk9EeqQJ8QKyknAVQ
+      index: 1102224136
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.GoodTransitionResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmStart
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224139
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmUnshelve
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224141
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmStart
+- !input
+   args: 
+      flavor: '1'
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224143
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmResize
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224145
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmLiveMigrate
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224147
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmUnpause
+- !input
+   args: 
+      confirm: '1'
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224149
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmResizeVerify
+- !input
+   args: {}
+   expectedSet: 
+   - !expected
+      extras: {}
+      index: 1102224151
+      qualifiedName: statemutest.testcase.GenericGeoTestCaseGenerator.InnoportuneResult
+   qualifiedName: wafec.testing.modeling.openstack.nova.features.servers.VmStart
+metadata: 
+   objective_rate_2: '37.0'
+   objective_rate_1: '5001.0'
+   iteration: '31413'
